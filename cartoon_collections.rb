@@ -2,11 +2,12 @@ dwarves = %w[Doc Dopey Bashful Grumpy]      #array shortcut to ["Doc" , "Dopey",
 
 #each_with_index method is used with array objects. Used like #each but instead of passing one argument to block, it passes two. 1st is item, 2nd is index.
 def roll_call_dwarves(dwarves)
-  dwarves.each_with_index { |dwarf, index|        #searches each dwarf element
-    puts "#{index + 1}. #{dwarf}"                 #prints number, then dwarf. starting at 1 (index + 1)
-  }
+  dwarves.each_with_index do |dwarf, index|
+    puts "#{index + 1}. #{dwarf}"
+  end
 end
-return roll_call_dwarves(dwarves)
+
+roll_call_dwarves(dwarves)
 
 planeteer_calls = %w[earth wind fire water heart]
 # Expected return value: ["Earth!", "Wind!", "Fire!", "Water!", "Heart!"]
